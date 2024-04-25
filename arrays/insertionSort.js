@@ -13,5 +13,5 @@ function insertionSort(array){
     return array
 }
 
-const arr = [7,9,6,3,1,4,2,8,-3]
+const arr = [7,9,2,8,-3]
 console.log(insertionSort(arr))
