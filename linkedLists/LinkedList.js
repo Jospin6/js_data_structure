@@ -64,6 +64,7 @@ linkedList.addFirst(12)
 linkedList.addFirst(7)
 linkedList.addAtLast(10)
 linkedList.addFirst(2)
+linkedList.addAt(3, 20)
 linkedList.print()
 
 console.log("==============")
