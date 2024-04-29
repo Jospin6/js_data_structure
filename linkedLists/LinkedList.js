@@ -34,6 +34,20 @@ class LinkedList {
         return count
     }
 
+    addAt(index, data){
+        if (index < 0 || index > this.size) {
+            console.log("Impossible")
+            return
+        }
+        const node = new Node(data)
+        let current = this.head
+        for (let i = 0; i < index - 1; i++) {
+            current = current.next
+        }
+        node.next = current.next
+        current.next = node
+    }
+
     print(){
         let current = this.head
         while (current) {
