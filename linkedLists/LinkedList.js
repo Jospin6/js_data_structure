@@ -48,6 +48,13 @@ class LinkedList {
         current.next = node
     }
 
+    removeTop(){
+        if (!this.head) {
+            return
+        }
+        this.head = this.head.next
+    }
+
     print(){
         let current = this.head
         while (current) {
