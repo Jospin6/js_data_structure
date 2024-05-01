@@ -55,6 +55,17 @@ class LinkedList {
         this.head = this.head.next
     }
 
+    removeLast(){
+        if (!this.head) {
+            return
+        }
+        let current = this.head
+        while (current.next.next) {
+            current = current.next
+        }
+        current.next = null
+    }
+
     print(){
         let current = this.head
         while (current) {
