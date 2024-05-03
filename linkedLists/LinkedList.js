@@ -66,6 +66,24 @@ class LinkedList {
         current.next = null
     }
 
+    removeAt(index){
+        if (index < 0 || index > this.size) {
+            console.log("Impossible")
+            return
+        }
+        if (index === 0) {
+            this.head = this.head.next
+            return
+        }
+        let current = this.head
+        for (let i = 0; i < index - 1; i++) {
+            current = current.next
+        }
+        if (current.next) {
+            current.next = current.next.next
+        }
+    }
+
     print(){
         let current = this.head
         while (current) {
