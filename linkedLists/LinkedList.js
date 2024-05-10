@@ -84,6 +84,24 @@ class LinkedList {
         }
     }
 
+    search(value){
+        if (this.size === 0) {
+            return -1
+        }
+
+        let i = 0
+        let current = this.head
+        
+        while (current) {
+            if (current.data === value) {
+                return i
+            }
+            current = current.next
+            i++
+        }
+        return -1
+    }
+
     print(){
         let current = this.head
         while (current) {
