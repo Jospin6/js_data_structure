@@ -102,6 +102,18 @@ class LinkedList {
         return -1
     }
 
+    reverse(){
+        let prev = null
+        let current = this.head
+        while (current) {
+            let next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        }
+        return prev
+    }
+
     print(){
         let current = this.head
         while (current) {
