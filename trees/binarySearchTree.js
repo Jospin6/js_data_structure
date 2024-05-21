@@ -47,3 +47,10 @@ class BinarySearchTree {
         }
     }
 }
+
+const bst = new BinarySearchTree()
+
+bst.insert(5)
+bst.insert(8)
+console.log(bst.search(bst.root, 5))
+console.log(bst.search(bst.root, 8))
