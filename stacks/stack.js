@@ -5,4 +5,8 @@ class Stack {
     push(value){
         this.stack.push(value)
     }
+
+    pop(){
+        this.stack.pop()
+    }
 }
