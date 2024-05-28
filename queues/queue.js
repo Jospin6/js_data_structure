@@ -6,4 +6,8 @@ class Queue {
     enqueue(value){
         this.queue.unshift(value)
     }
+
+    dequeue(){
+        this.queue.shift()
+    }
 }
