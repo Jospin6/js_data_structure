@@ -10,4 +10,8 @@ class Queue {
     dequeue(){
         this.queue.shift()
     }
+
+    size(){
+        return this.queue.length
+    }
 }
