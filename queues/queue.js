@@ -14,4 +14,8 @@ class Queue {
     size(){
         return this.queue.length
     }
+
+    print(){
+        this.queue.forEach(el => console.log(el))
+    }
 }
