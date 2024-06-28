@@ -46,6 +46,13 @@ class BinarySearchTree {
             }
         }
     }
+    depthFirstSearch(root){
+        if (root) {
+            console.log(root.value)
+            this.depthFirstSearch(root.left)
+            this.depthFirstSearch(root.right)
+        }
+    }
 }
 
 const bst = new BinarySearchTree()
