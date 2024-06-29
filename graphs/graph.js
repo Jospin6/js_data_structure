@@ -17,4 +17,9 @@ class Graph {
         this.adjacencyList[vertex1].add(vertex2)
         this.adjacencyList[vertex2].add(vertex1)
     }
+    display(){
+        for (const vertex in this.adjacencyList) {
+            console.log(vertex + "->" + this.adjacencyList[vertex])
+        }
+    }
 }
