@@ -27,7 +27,15 @@ class Graph {
         this.adjacencyList[vertex1].delete(vertex2)
         this.adjacencyList[vertex2].delete(vertex1)
     }
-    
+    removeVertex(vertex){
+        if (!this.adjacencyList[vertex]) {
+            return
+        }
+        for (const adjacencyVertex of this.adjacencyList[vertex]) {
+            this.removeEdge(vertex, adjacencyVertex)
+        }
+        delete this.adjacencyList[vertex]
+    }
     display(){
         for (const vertex in this.adjacencyList) {
             console.log(vertex + "->" + this.adjacencyList[vertex])
