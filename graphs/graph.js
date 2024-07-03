@@ -23,7 +23,11 @@ class Graph {
             this.adjacencyList[vertex2].has(vertex1)
         )
     }
-
+    removeEdge(vertex1, vertex2){
+        this.adjacencyList[vertex1].delete(vertex2)
+        this.adjacencyList[vertex2].delete(vertex1)
+    }
+    
     display(){
         for (const vertex in this.adjacencyList) {
             console.log(vertex + "->" + this.adjacencyList[vertex])
